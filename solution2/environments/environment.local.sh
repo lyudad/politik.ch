@@ -1,0 +1,1 @@
+export REACT_APP_SERVER_URL='http://ws-old.parlament.ch'
