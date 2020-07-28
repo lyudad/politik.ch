@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <ul id="todo-app">
+            <li class="item">Walk the dog</li>
+            <li class="item">Pay bills</li>
+            <li class="item">Make dinner</li>
+            <li class="item">Code for one hour</li>
+        </ul>
+
+        <script type="text/javascript">
+            document.addEventListener('click', function (event) {
+                if (event.target.matches('#todo-app .item')) {
+                    alert('you clicked on item: ' + event.target.innerHTML);
+                }
+            }, false);
+        </script>
+    </body>
+</html>
