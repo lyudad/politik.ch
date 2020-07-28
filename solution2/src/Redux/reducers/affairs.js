@@ -2,7 +2,8 @@ import { createReducer } from 'Helpers/redux'
 import { GET_AFFAIRS, SET_AFFAIRS_FILTER } from 'Redux/actions/affairs'
 
 const initialState = {
-  affairs: null,
+  //affairs: null,
+  affairs: [{id: '1', shortId: 'Test1'}, {id: '2', shortId: 'Test3'}],
   error: null,
   filterField: null
 }
