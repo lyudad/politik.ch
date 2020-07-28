@@ -1,5 +1,5 @@
 import { createReducer } from 'Helpers/redux'
-import { GET_COUNCILLORS } from 'Redux/actions/councillors'
+import { GET_COUNCILLORS, SET_COUNCILLORS_FILTER } from 'Redux/actions/councillors'
 
 const initialState = {
   councillors: null,
@@ -14,9 +14,13 @@ const handlers = {
     })
   },
   [GET_COUNCILLORS.FAILURE]: (state, action) => {
-    console.log('action>>>>>>', action.payload.data)
     return Object.assign({}, state, {
       error: action.payload.data,
+    })
+  },
+  [SET_COUNCILLORS_FILTER.SUCCESS]: (state, action) => {
+    return Object.assign({}, state, {
+        filterField: action.payload.filterField,
     })
   },
 }
