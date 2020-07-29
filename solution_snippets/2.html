@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.addEventListener('mousemove', function () {
+                if(typeof movewait != 'undefined'){
+                    clearTimeout(movewait);
+                }
+                movewait = setTimeout(function(){
+                    for (let i = 0; i < 9999; i++) {
+                        console.log(i);
+                    }
+                },200);
+            });
+        </script>
+    </body>
+</html>
