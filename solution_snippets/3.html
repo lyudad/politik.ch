@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+           const magnitude = (data) => {
+                const initial = 0; 
+                const mapFunction = (item) => item * item;
+                const reduceFunction = (iv,current) => iv + current;
+    
+                console.log(
+                    Math.sqrt(data
+                        .map(mapFunction)
+                        .reduce(reduceFunction,initial)
+                    )
+                );
+           }
+
+           magnitude([3, 4])
+           magnitude([0, 0, -10])
+           magnitude([])
+           magnitude([2, 3, 6, 1, 8] )
+
+        </script>
+    </body>
+</html>
